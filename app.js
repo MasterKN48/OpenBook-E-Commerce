@@ -1,12 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const auth=require('./routes/auth');
-const user=require('./routes/user');
 const morgan=require('morgan');
 const bodyParser = require("body-parser");
 const cookieParser=require('cookie-parser')
 const expressValidator=require('express-validator')
+// Routes
+const auth=require('./routes/auth');
+const user=require('./routes/user');
+const category=require('./routes/category');
+const product=require('./routes/product');
+
 // app
 const app = express();
 
@@ -25,6 +29,8 @@ app.use(expressValidator());
 // routes
 app.use("/api",auth);
 app.use("/api",user);
+app.use("/api",category);
+app.use("/api",product);
 
 
 
