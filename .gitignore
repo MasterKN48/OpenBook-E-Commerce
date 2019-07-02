@@ -1,5 +1,6 @@
 node_modules
 package-lock.json
 .env
-
+client
+client/node_modules
 
