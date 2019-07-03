@@ -32,7 +32,7 @@ exports.create = (req, res) => {
     const { name, description, price, category, quantity, shipping } = fields;
     if (!name || !description || !price || !category || !shipping) {
       return res.status(400).json({
-        error: `All fileds are required ${name},${description},${price},${category},${quantity},${shipping}`
+        error: 'All fileds are required'
       });
     }
     let product = new Product(fields);

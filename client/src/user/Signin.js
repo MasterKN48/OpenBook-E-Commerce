@@ -88,6 +88,9 @@ const Signin = () => {
             }
             
         }
+        if(isAuthenticated()){
+            return <Redirect to='/'/>
+        }
     };
 
     return (
