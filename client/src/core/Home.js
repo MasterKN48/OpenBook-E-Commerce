@@ -3,7 +3,6 @@ import Layout from "./Layout";
 import { getProducts } from "./apiCore";
 import Card from './Card';
 import Search from './Search';
-//import Footer from './Footer';
 const Home = () => {
   const [productBySell,setProductBySell]=useState([]);
   const [productByArrival,setProductByArrival]=useState([]);
@@ -66,7 +65,6 @@ const Home = () => {
                loading()
           ) : show()
       }
-      
     </Layout>
   );
 };

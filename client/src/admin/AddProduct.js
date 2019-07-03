@@ -54,7 +54,7 @@ const AddProduct = () => {
 
     useEffect(() => {
         init();
-    }, []);
+    });
 
     const handleChange = name => event => {
         const value =
