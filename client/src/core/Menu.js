@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react'
 import {Link, withRouter} from 'react-router-dom';
 import {signout,isAuthenticated} from '../auth';
-
+import {itemTotal} from './cartHelpers';
 const isActive=(history,path)=>{
     if(history.location.pathname===path){
         return 'active'
@@ -27,6 +27,10 @@ const Menu=({history})=> {
             </li>
             <li className={'nav-item' + isActive(history,'/shop') }>
                 <Link className="nav-link" to='/shop'>Shop
+                </Link>
+            </li>
+            <li className={'nav-item' + isActive(history,'/cart') }>
+                <Link className="nav-link" to='/cart'>Cart <sup><small className='badge'>{itemTotal()}</small></sup>
                 </Link>
             </li>
             {isAuthenticated() && isAuthenticated().user.role === 1 && (
