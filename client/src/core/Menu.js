@@ -13,7 +13,7 @@ const isActive=(history,path)=>{
 const Menu=({history})=> {
     return (
         <nav className="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
-        <Link to='/' className="navbar-brand">Shop</Link>
+        <Link to='/' className="navbar-brand">MyBook</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -39,10 +39,10 @@ const Menu=({history})=> {
             {!isAuthenticated() && (
                 <Fragment>
                     <li className={'nav-item' + isActive(history,'/signin') }>
-                        <Link className="nav-link" to='/signin'>Sign IN</Link>
+                        <Link className="nav-link" to='/signin'>SignIn</Link>
                     </li>
                     <li className={'nav-item' + isActive(history,'/signup') }>
-                        <Link className="nav-link" to='/signup'>Sign UP</Link>
+                        <Link className="nav-link" to='/signup'>SignUp</Link>
                     </li>
                 </Fragment>
             )}

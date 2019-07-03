@@ -84,12 +84,16 @@ const AddProduct = () => {
             }
         });
     };
-
+    const goBack=()=>(
+        <div className="mb-5">
+            <Link to='/admin/dashboard' className='text-warning'>Back to Dashboard</Link>
+        </div>
+    )
     const newPostForm = () => (
         <form className="mb-3" onSubmit={clickSubmit}>
-            <h4>Post Photo</h4>
+            <h4>Product Photo</h4>
             <div className="form-group">
-                <label className="btn btn-secondary">
+                <label className="btn btn-dark">
                     <input
                         onChange={handleChange("photo")}
                         type="file"
@@ -206,6 +210,7 @@ const AddProduct = () => {
                     {showSuccess()}
                     {showError()}
                     {newPostForm()}
+                    {goBack()}
                 </div>
             </div>
         </Layout>
