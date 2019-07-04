@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "braintree-web": "^3.46.0",
+    "braintree-web-drop-in-react": "^1.0.8",
     "moment": "^2.24.0",
     "query-string": "^6.8.1",
     "react": "^16.8.6",

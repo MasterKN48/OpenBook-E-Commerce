@@ -11,7 +11,7 @@ const auth=require('./routes/auth');
 const user=require('./routes/user');
 const category=require('./routes/category');
 const product=require('./routes/product');
-
+const braintree=require('./routes/braintree');
 // app
 const app = express();
 
@@ -33,7 +33,7 @@ app.use("/api",auth);
 app.use("/api",user);
 app.use("/api",category);
 app.use("/api",product);
-
+app.use('/api',braintree);
 
 
 const port = process.env.PORT || 8000;
