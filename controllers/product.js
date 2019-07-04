@@ -78,12 +78,12 @@ exports.update = (req, res) => {
       });
     }
     // check for fileds
-    const { name, description, price, category, quantity, shipping } = fields;
-    if (!name || !description || !price || !category || !shipping) {
-      return res.status(400).json({
-        error: `All fileds are required ${name},${description},${price},${category},${quantity},${shipping}`
-      });
-    }
+    // const { name, description, price, category, quantity, shipping } = fields;
+    // if (!name || !description || !price || !category || !shipping) {
+    //   return res.status(400).json({
+    //     error: `All fileds are required ${name},${description},${price},${category},${quantity},${shipping}`
+    //   });
+    // }
     let product = req.product;
     product = _.extend(product, fields);
     if (files.photo) {

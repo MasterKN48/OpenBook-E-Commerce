@@ -12,6 +12,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "braintree": "^2.18.0",
+    "concurrently": "^4.1.1",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
