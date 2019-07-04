@@ -6,6 +6,7 @@ import Card from './Card';
 const Product=(props)=>{
     const [product,setProduct]=useState({});
     const [relatedProduct, setRelatedProduct] = useState([]);
+    // eslint-disable-next-line
     const [error,setError]=useState({});
     const loadSingleProduct=productId=>{
         read(productId).then(data=>{

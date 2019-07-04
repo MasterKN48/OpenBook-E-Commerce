@@ -45,20 +45,21 @@ export const getCart = () => {
     return [];
 };
 
-export const updateItem = (id,count) => {
-    let cart=[]
+export const updateItem = (productId, count) => {
+    let cart = [];
     if (typeof window !== "undefined") {
         if (localStorage.getItem("cart")) {
-            cart=JSON.parse(localStorage.getItem('cart'))
+            cart = JSON.parse(localStorage.getItem("cart"));
         }
-        cart.map((p,i)=>{
-            if(p._id === id){
-                cart[i].count=count
+// eslint-disable-next-line
+        cart.map((product, i) => {
+            if (product._id === productId) {
+                cart[i].count = count;
             }
-        })
-        localStorage.setItem('cart',JSON.stringify(cart));
+        });
+
+        localStorage.setItem("cart", JSON.stringify(cart));
     }
-    
 };
 
 export const removeItem = (id) => {
@@ -66,7 +67,7 @@ export const removeItem = (id) => {
     if (typeof window !== "undefined") {
         if (localStorage.getItem("cart")) {
             cart=JSON.parse(localStorage.getItem('cart'))
-        }
+        }// eslint-disable-next-line
         cart.map((p,i)=>{
             if(p._id === id){
                 cart.splice(i,1)
@@ -76,3 +77,10 @@ export const removeItem = (id) => {
     }
     return cart;
 };
+
+export const emptyCart=next=>{
+    if (typeof window !== "undefined") {
+        localStorage.removeItem('cart');
+        next();
+    }
+}

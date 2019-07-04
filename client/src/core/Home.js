@@ -6,6 +6,7 @@ import Search from './Search';
 const Home = () => {
   const [productBySell,setProductBySell]=useState([]);
   const [productByArrival,setProductByArrival]=useState([]);
+  // eslint-disable-next-line
   const [error,setError]=useState(false);
   const [load,setLoad]=useState(false);
   const loadProductBySell=()=>{

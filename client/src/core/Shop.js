@@ -10,8 +10,8 @@ const Shop = () => {
     const [myFilters, setMyFilters] = useState({
         filters: { category: [], price: [] }
     });
-    const [categories, setCategories] = useState([]);
-    const [error, setError] = useState(false);
+    const [categories, setCategories] = useState([]);// eslint-disable-next-line
+    const [error, setError] = useState(false);// eslint-disable-next-line
     const [limit, setLimit] = useState(6);
     const [skip, setSkip] = useState(0);
     const [filteredResults, setFilteredResults] = useState([]);

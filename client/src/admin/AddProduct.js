@@ -22,17 +22,18 @@ const AddProduct = () => {
     });
 
     const { user, token } = isAuthenticated();
+    // eslint-disable-next-line
     const {
         name,
         description,
         price,
-        categories,
-        category,
+        categories,// eslint-disable-next-line
+        category,// eslint-disable-next-line
         shipping,
         quantity,
         loading,
         error,
-        createdProduct,
+        createdProduct,// eslint-disable-next-line
         redirectToProfile,
         formData
     } = values;
