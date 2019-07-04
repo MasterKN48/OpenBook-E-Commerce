@@ -12,6 +12,7 @@ const user=require('./routes/user');
 const category=require('./routes/category');
 const product=require('./routes/product');
 const braintree=require('./routes/braintree');
+const order=require('./routes/order');
 // app
 const app = express();
 
@@ -34,6 +35,7 @@ app.use("/api",user);
 app.use("/api",category);
 app.use("/api",product);
 app.use('/api',braintree);
+app.use('/api',order);
 
 
 const port = process.env.PORT || 8000;

@@ -11,6 +11,7 @@ import Dashboard from './UserDashboard';
 import AdminRoute from '../auth/AdminRoute';
 import AdminDashboard from './AdminDashboard';
 import AddCategory from '../admin/AddCategory';
+import Orders from '../admin/Order';
 import AddProduct from '../admin/AddProduct';
 
 const Routes=()=>{
@@ -27,6 +28,7 @@ const Routes=()=>{
                 <AdminRoute path="/admin/dashboard" exact component={AdminDashboard} />
                 <AdminRoute path="/create/category" exact component={AddCategory} />
                 <AdminRoute path="/create/product" exact component={AddProduct} />
+                <AdminRoute path="/admin/orders" exact component={Orders} />
             </Switch>
         </BrowserRouter>
     )
