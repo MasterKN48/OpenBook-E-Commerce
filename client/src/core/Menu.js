@@ -2,6 +2,7 @@ import React,{Fragment} from 'react'
 import {NavLink,Link, withRouter} from 'react-router-dom';
 import {signout,isAuthenticated} from '../auth';
 import {itemTotal} from './cartHelpers';
+import Book from './Book.png';
 const isActive=(history,path)=>{
     if(history.location.pathname===path){
         return 'active'
@@ -13,7 +14,7 @@ const isActive=(history,path)=>{
 const Menu=({history})=> {
     return (
         <nav className="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
-        <Link to='/' className="navbar-brand">MyBook</Link>
+        <Link to='/' className="navbar-brand"> <img src={Book} alt="book" style={{height:'32px',width:'32px'}}/> OpenBook</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -30,7 +31,7 @@ const Menu=({history})=> {
                 </Link>
             </li>
             <li className={'nav-item' + isActive(history,'/cart') }>
-                <Link className="nav-link" to='/cart'><i className="opencart icon"></i> <sup><small className='ui circular small label'>{itemTotal()}</small></sup>
+                <Link className="nav-link" to='/cart'><i className="shopping cart icon"></i>{itemTotal() !== 0 ? <sup><small className='ui circular tiny label'>{itemTotal()}</small></sup> : null}
                 </Link>
             </li>
             </ul>

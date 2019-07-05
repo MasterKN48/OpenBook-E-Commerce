@@ -55,14 +55,14 @@ const Home = () => {
        </Fragment>
     );
     const loading=()=>(
-        <div class="ui segment">
-            <div class="ui active inverted dimmer">
-                <div class="ui large text loader">Loading</div>
+        <div className="ui segment">
+            <div className="ui active inverted dimmer">
+                <div className="ui large text loader">Loading</div>
             </div>
         </div>
     );
   return (
-    <Layout title="Home Page" search='true' className='container-fluid' description="Node React E-commerce App">
+    <Layout title="OpenBook" logo='true' className='container-fluid' description="Online World to buy Books">
       <Search />
       {
           load === true ? (

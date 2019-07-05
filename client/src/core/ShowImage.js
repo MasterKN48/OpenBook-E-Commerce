@@ -9,8 +9,8 @@ const ShowImage=({item,url})=>{
         className="mb-3"
         src={`${API}/${url}/photo/${item._id}`}
         loader={
-            <div class="ui placeholder">
-              <div class="image"></div>
+            <div className="ui placeholder">
+              <div className="image"></div>
             </div>
         }
     />

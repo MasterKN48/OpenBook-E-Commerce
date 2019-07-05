@@ -96,7 +96,7 @@ const Signin = () => {
     return (
         <Layout
             title="SignIn"
-            description="SignIn to Node React E-commerce App"
+            description="SignIn to OpenBook"
             className="container col-md-8 offset-md-2"
         >
             {showLoading()}
