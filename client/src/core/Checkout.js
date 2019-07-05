@@ -36,7 +36,7 @@ const Checkout = ({ products }) => {
     };
 
     useEffect(() => {
-        getToken(userId, token);
+        getToken(userId, token);// eslint-disable-next-line
     },[]);
 
     const handleAddress = event => {

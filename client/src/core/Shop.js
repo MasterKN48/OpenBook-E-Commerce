@@ -60,7 +60,7 @@ const Shop = () => {
     }
     useEffect(() => {
         init();
-        loadFilteredResults(skip, limit, myFilters.filters);
+        loadFilteredResults(skip, limit, myFilters.filters);// eslint-disable-next-line
     },[]);
 
     const handleFilters = (filters, filterBy) => {

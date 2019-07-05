@@ -1,6 +1,5 @@
 import React from "react";
 import Menu from "./Menu";
-import Search from './Search';
 import Book from './Book.png';
 const Layout = ({
     title = "Title",
