@@ -20,14 +20,25 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
             return <Redirect to="/cart" />;
         }
     };
-    const showAddToCartButton=()=>{
-        return (
-            cartButton && (
-                <button onClick={addToCart} className="btn btn-outline-warning mt-2 mb-2">
-                    Add to card
-                </button>
+    const showAddToCartButton=(qu)=>{
+        if(qu>0){
+            return (
+                cartButton && (
+                    <button onClick={addToCart} className="btn btn-outline-warning mt-2 mb-2">
+                        Add to card
+                    </button>
+                )
             )
-        )
+        }else{
+            return (
+                cartButton && (
+                    <button disabled onClick={addToCart} className="btn btn-outline-danger mt-2 mb-2">
+                        Add to card
+                    </button>
+                )
+            )
+        }
+        
     }
     const handleChange= productId=>event =>{
         setCount(event.target.value < 1 ? 1: event.target.value);
@@ -70,7 +81,7 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
                     )}
                     {showCartUpdate()}
                     {showCartRemove()}
-                    {showAddToCartButton()}
+                    {showAddToCartButton(product.quantity)}
                     
                 </div>
             </div>
