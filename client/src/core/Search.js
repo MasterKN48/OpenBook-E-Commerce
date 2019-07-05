@@ -75,36 +75,18 @@ const Search = () => {
 
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
-            <span className="input-group-text">
-                <div className="input-group input-group-lg">
-                    <div className="input-group-prepend">
-                        <select
-                            className="btn mr-2"
-                            onChange={handleChange("category")}
-                        >
-                            <option value="All">All Category</option>
-                            {categories.map((c, i) => (
+            <div className="ui fluid action input">
+                <input style={{border: '1px solid grey'}} type="search" onChange={handleChange("search")} placeholder="Search..." />
+                <select style={{border: '1px solid grey'}} className="ui compact selection dropdown" onChange={handleChange("category")}>
+                    <option value="all">All</option>
+                    {categories.map((c, i) => (
                                 <option key={i} value={c._id}>
                                     {c.name}
                                 </option>
-                            ))}
-                        </select>
-                    </div>
-
-                    <input
-                        type="search"
-                        className="form-control"
-                        onChange={handleChange("search")}
-                        placeholder="Search by name"
-                    />
-                </div>
-                <div
-                    className="btn input-group-append"
-                    style={{ border: "none" }}
-                >
-                    <button className="input-group-text">Search</button>
-                </div>
-            </span>
+                     ))}
+                </select>
+                <div className="ui button positive" onClick={searchSubmit}>Search</div>
+             </div>
         </form>
     );
 

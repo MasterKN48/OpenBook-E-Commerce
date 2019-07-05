@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { listOrders,getStatusValues,updateOrderStatus } from "./apiAdmin";
 import moment from "moment";
 
@@ -23,7 +23,7 @@ const Orders = () => {
     useEffect(() => {
         loadOrders();
         loadStatusValues();
-    }, []);
+    });
 
     const showOrdersLength = () => {
         if (orders.length > 0) {

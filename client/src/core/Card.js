@@ -63,7 +63,7 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
     }
     return (
             <div className="card">
-                <div className="card-header name">{product.name}</div>
+                <div className="card-header bg-primary text-white">{product.name}</div>
                 <div className="card-body">
                     {shouldRedirect(redirect)}
                     <ShowImage item={product} url="product" />

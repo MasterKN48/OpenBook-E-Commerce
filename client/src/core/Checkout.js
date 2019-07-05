@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {
+import {// eslint-disable-next-line
     getProducts,
     getBraintreeClientToken,
     processPayment,
     createOrder
 } from "./apiCore";
-import { emptyCart } from "./cartHelpers";
+import { emptyCart } from "./cartHelpers";// eslint-disable-next-line
 import Card from "./Card";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
@@ -60,10 +60,12 @@ const Checkout = ({ products }) => {
     };
     let delAddress=data.address;
     const buy = () => {
+        let NAME = document.getElementById("showhide")
+        NAME.className="ui primary loading button fluid";
         setData({ loading: true });
         // send the nonce to your server
         // nonce = data.instance.requestPaymentMethod()
-        let nonce;
+        let nonce;// eslint-disable-next-line
         let getNonce = data.instance
             .requestPaymentMethod()
             .then(data => {
@@ -140,7 +142,7 @@ const Checkout = ({ products }) => {
                         }}
                         onInstance={instance => (data.instance = instance)}
                     />
-                    <button onClick={buy} className="btn btn-success btn-block">
+                    <button onClick={buy} id="showhide" className="btn btn-success btn-block">
                         Pay
                     </button>
                 </div>

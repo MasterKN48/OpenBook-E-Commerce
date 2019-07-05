@@ -30,7 +30,7 @@ const Menu=({history})=> {
                 </Link>
             </li>
             <li className={'nav-item' + isActive(history,'/cart') }>
-                <Link className="nav-link" to='/cart'>Cart <sup><small className='badge'>{itemTotal()}</small></sup>
+                <Link className="nav-link" to='/cart'><i className="opencart icon"></i> <sup><small className='badge'>{itemTotal()}</small></sup>
                 </Link>
             </li>
             {isAuthenticated() && isAuthenticated().user.role === 1 && (

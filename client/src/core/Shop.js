@@ -61,7 +61,7 @@ const Shop = () => {
     useEffect(() => {
         init();
         loadFilteredResults(skip, limit, myFilters.filters);
-    });
+    },[]);
 
     const handleFilters = (filters, filterBy) => {
         // console.log("SHOP", filters, filterBy);
