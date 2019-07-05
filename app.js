@@ -37,6 +37,14 @@ app.use("/api",product);
 app.use('/api',braintree);
 app.use('/api',order);
 
-
-const port = process.env.PORT || 8000;
-app.listen(port, () => `Server running on port ${port} 🔥`);
+// serve static asstes if in production
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static('client/build'));
+    app.get('*',(req,res)=>{
+      res.sendFile(path.resolve(__dirname,'client','build','index.html'));
+    })
+  }
+  const port = process.env.PORT || 8000;
+  
+  app.listen(port, () => console.log(`Server running on port ${port}`));
+  
