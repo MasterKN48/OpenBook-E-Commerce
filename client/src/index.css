@@ -6,7 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+footer{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+#dd{
+  position: relative;
+  min-height: 100vh;
+  padding-bottom:60px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

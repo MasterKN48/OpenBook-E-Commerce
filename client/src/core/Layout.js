@@ -1,11 +1,11 @@
 import React from "react";
 import Menu from "./Menu";
-
+import Search from './Search';
 const Layout = ({
     title = "Title",
     description = "Description",
     className,
-    children
+    children,
 }) => (
     <div>
         <Menu />

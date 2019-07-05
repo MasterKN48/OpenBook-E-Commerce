@@ -24,17 +24,17 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
         if(qu>0){
             return (
                 cartButton && (
-                    <button onClick={addToCart} className="btn btn-outline-warning mt-2 mb-2">
+                    <div id='btt' onClick={addToCart} className="ui positive button">
                         Add to card
-                    </button>
+                    </div>
                 )
             )
         }else{
             return (
                 cartButton && (
-                    <button disabled onClick={addToCart} className="btn btn-outline-danger mt-2 mb-2">
-                        Add to card
-                    </button>
+                    <div className="ui negative button">
+                        Out of Stock
+                    </div>
                 )
             )
         }
@@ -63,7 +63,7 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
     }
     return (
             <div className="card">
-                <div className="card-header bg-primary text-white">{product.name}</div>
+                <div className="card-header bg-dark text-white">{product.name}</div>
                 <div className="card-body">
                     {shouldRedirect(redirect)}
                     <ShowImage item={product} url="product" />
@@ -71,17 +71,19 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
                     <p className='black-10'>${product.price}</p>
                     <p className='black-9'>Category: {product.category && product.category.name}</p>
                     <p className='black-8'>Added on {moment(product.createdAt).fromNow()} </p>
-                    {showStock(product.quantity)} <br/>
-                    {showButton && (
-                        <Link to={`/product/${product._id}`}>
-                            <button className="btn btn-outline-primary mt-2 mb-2">
-                                View Product
-                            </button>
-                        </Link>
-                    )}
+                    {showStock(product.quantity)} <br/><br/>
+                    <div className="ui two buttons">
+                        {showButton && (
+                                <Link className="ui basic green button" to={`/product/${product._id}`}>
+                                        View Product
+                                </Link>
+                            )}
+                        {showAddToCartButton(product.quantity)}
+                    </div> 
+                    <hr/>
                     {showCartUpdate()}
                     {showCartRemove()}
-                    {showAddToCartButton(product.quantity)}
+                    
                     
                 </div>
             </div>

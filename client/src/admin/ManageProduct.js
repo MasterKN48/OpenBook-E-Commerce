@@ -32,7 +32,11 @@ const ManageProduct = () => {
     useEffect(() => {
         loadProducts();
     }, []);
-
+    const goBack=()=>(
+        <div className="mb-5">
+            <Link to='/admin/dashboard' className='text-warning'>Back to Dashboard</Link>
+        </div>
+    )
     return (
         <Layout
             title="Manage Products"
@@ -45,6 +49,7 @@ const ManageProduct = () => {
                         Total {products.length} products
                     </h2>
                     <hr />
+                    {goBack()}
                     <ul className="list-group">
                         {products.map((p, i) => (
                             <li

@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react'
-import {Link, withRouter} from 'react-router-dom';
+import {NavLink,Link, withRouter} from 'react-router-dom';
 import {signout,isAuthenticated} from '../auth';
 import {itemTotal} from './cartHelpers';
 const isActive=(history,path)=>{
@@ -30,38 +30,42 @@ const Menu=({history})=> {
                 </Link>
             </li>
             <li className={'nav-item' + isActive(history,'/cart') }>
-                <Link className="nav-link" to='/cart'><i className="opencart icon"></i> <sup><small className='badge'>{itemTotal()}</small></sup>
+                <Link className="nav-link" to='/cart'><i className="opencart icon"></i> <sup><small className='ui circular small label'>{itemTotal()}</small></sup>
                 </Link>
             </li>
-            {isAuthenticated() && isAuthenticated().user.role === 1 && (
+            </ul>
+            <ul className="navbar-nav ml-auto nav-flex-icons">
+                {!isAuthenticated() && (
+                    <div className="ui buttons">
+                        <NavLink style={{color:'white'}} to='/signin'>
+                            <button className='ui blue button'>
+                                Log In
+                             </button>
+                        </NavLink>
+                        <div className="or"></div>
+                        <NavLink style={{color:'white'}} to='/signup'>
+                        <button className='ui positive button'>Sign Up</button>
+                        </NavLink>
+                    </div>
+                )}
+                {isAuthenticated() && isAuthenticated().user.role === 1 && (
                 <Fragment>
                     <li className={'nav-item' + isActive(history,'/admin/dashboard') }>
                         <Link className="nav-link" to='/admin/dashboard'>Dashboard</Link>
                     </li>
                 </Fragment>
-            )}
-            {isAuthenticated() && isAuthenticated().user.role === 0 && (
-                <Fragment>
-                    <li className={'nav-item' + isActive(history,'/user/dashboard') }>
-                        <Link className="nav-link" to='/user/dashboard'>Dashboard</Link>
-                    </li>
-                </Fragment>
-            )}
-            {!isAuthenticated() && (
-                <Fragment>
-                    <li className={'nav-item' + isActive(history,'/signin') }>
-                        <Link className="nav-link" to='/signin'>SignIn</Link>
-                    </li>
-                    <li className={'nav-item' + isActive(history,'/signup') }>
-                        <Link className="nav-link" to='/signup'>SignUp</Link>
-                    </li>
-                </Fragment>
-            )}
-
-            {isAuthenticated() && (
+                )}
+                {isAuthenticated() && isAuthenticated().user.role === 0 && (
+                    <Fragment>
+                        <li className={'nav-item' + isActive(history,'/user/dashboard') }>
+                            <Link className="nav-link" to='/user/dashboard'>Dashboard</Link>
+                        </li>
+                    </Fragment>
+                )}
+                {isAuthenticated() && (
                 <li className="nav-item">
                     <span
-                        className="nav-link"
+                        className="ui red button"
                         style={{ cursor: "pointer", color: "#ffffff" }}
                         onClick={() =>
                             signout(() => {

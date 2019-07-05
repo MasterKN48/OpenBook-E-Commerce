@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { listOrders,getStatusValues,updateOrderStatus } from "./apiAdmin";
 import moment from "moment";
 
@@ -23,7 +23,7 @@ const Orders = () => {
     useEffect(() => {
         loadOrders();
         loadStatusValues();
-    });
+    },[]);
 
     const showOrdersLength = () => {
         if (orders.length > 0) {
@@ -36,6 +36,11 @@ const Orders = () => {
             return <h5 className="text-danger">No orders</h5>;
         }
     };
+    const goBack=()=>(
+        <div className="mb-5">
+            <Link to='/admin/dashboard' className='text-warning'>Back to Dashboard</Link>
+        </div>
+    )
     const loadStatusValues = () => {
         getStatusValues(user._id, token).then(data => {
             if (data.error) {
@@ -153,6 +158,7 @@ const Orders = () => {
                         );
                     })}
                 </div>
+                {goBack()}
             </div>
         </Layout>
     );

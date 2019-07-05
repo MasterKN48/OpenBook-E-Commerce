@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import { getProducts } from "./apiCore";
 import Card from './Card';
 import Search from './Search';
+
 const Home = () => {
   const [productBySell,setProductBySell]=useState([]);
   const [productByArrival,setProductByArrival]=useState([]);
@@ -54,12 +55,14 @@ const Home = () => {
        </Fragment>
     );
     const loading=()=>(
-        <div className="spinner-border text-danger center text-center align-center" role="status">
-            <span className="sr-only">Loading...</span>
+        <div class="ui segment">
+            <div class="ui active inverted dimmer">
+                <div class="ui large text loader">Loading</div>
+            </div>
         </div>
     );
   return (
-    <Layout title="Home Page" className='container-fluid' description="Node React E-commerce App">
+    <Layout title="Home Page" search='true' className='container-fluid' description="Node React E-commerce App">
       <Search />
       {
           load === true ? (
