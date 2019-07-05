@@ -1,5 +1,3 @@
-import { API } from "../config";
-
 export const createCategory = async (userId,token,category) => {
     try {
         const response = await fetch(`api/category/create/${userId}`, {

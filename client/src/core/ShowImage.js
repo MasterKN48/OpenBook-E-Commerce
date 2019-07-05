@@ -1,5 +1,4 @@
 import React from 'react';
-import {API} from '../config';
 import Img from 'react-image'
 const ShowImage=({item,url})=>{
     const myComponent = () =>
@@ -7,7 +6,7 @@ const ShowImage=({item,url})=>{
         alt={item.name}
         style={{maxHeight:'40%',maxWidth:'50%'}} 
         className="mb-3"
-        src={`${API}/${url}/photo/${item._id}`}
+        src={`api/${url}/photo/${item._id}`}
         loader={
             <div className="ui placeholder">
               <div className="image"></div>

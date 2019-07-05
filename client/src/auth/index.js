@@ -1,5 +1,3 @@
-import { API } from "../config";
-
 export const signup = user => {
     return fetch(`api/signup`, {
         method: "POST",
