@@ -3,7 +3,7 @@ import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Redirect } from "react-router-dom";
 import { getProduct, getCategories, updateProduct } from "./apiAdmin";
-
+import { Link } from "react-router-dom";
 const UpdateProduct = ({ match }) => {
     const [values, setValues] = useState({
         name: "",
@@ -74,8 +74,8 @@ const UpdateProduct = ({ match }) => {
     };
 
     useEffect(() => {
-        init(match.params.productId);
-    });
+        init(match.params.productId);// eslint-disable-next-line
+    },[]);
 
     const handleChange = name => event => {
         const value =
@@ -83,7 +83,11 @@ const UpdateProduct = ({ match }) => {
         formData.set(name, value);
         setValues({ ...values, [name]: value });
     };
-
+    const goBack=()=>(
+        <div className="mb-5">
+            <Link to='/admin/dashboard' className='text-warning'>Back to Dashboard</Link>
+        </div>
+    )
     const clickSubmit = event => {
         event.preventDefault();
         setValues({ ...values, error: "", loading: true });
@@ -112,7 +116,8 @@ const UpdateProduct = ({ match }) => {
 
     const newPostForm = () => (
         <form className="mb-3" onSubmit={clickSubmit}>
-            <h4>Post Photo</h4>
+            {goBack()}
+            <h4>Product Photo</h4>
             <div className="form-group">
                 <label className="btn btn-secondary">
                     <input

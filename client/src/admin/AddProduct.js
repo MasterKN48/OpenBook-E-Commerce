@@ -54,8 +54,8 @@ const AddProduct = () => {
     };
 
     useEffect(() => {
-        init();
-    });
+        init();// eslint-disable-next-line
+    },[]);
 
     const handleChange = name => event => {
         const value =
@@ -94,14 +94,12 @@ const AddProduct = () => {
         <form className="mb-3" onSubmit={clickSubmit}>
             <h4>Product Photo</h4>
             <div className="form-group">
-                <label className="btn btn-dark">
-                    <input
-                        onChange={handleChange("photo")}
-                        type="file"
-                        name="photo"
-                        accept="image/*"
-                    />
-                </label>
+                    <div className="custom-file">
+                        <input onChange={handleChange("photo")} name="photo"
+                        accept="image/*" type="file" className="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01"/>
+                        <label className="custom-file-label" htmlFor="inputGroupFile01">Choose file</label>
+                    </div>
             </div>
 
             <div className="form-group">

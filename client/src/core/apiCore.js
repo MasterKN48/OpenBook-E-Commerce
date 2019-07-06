@@ -1,4 +1,3 @@
-
 import queryString from "query-string";
 
 export const getProducts = sortBy => {
@@ -56,7 +55,7 @@ export const list = params => {
 };
 
 export const read = (productId) => {
-    return fetch(`api/product/${productId}`, {
+    return fetch(`../api/product/${productId}`, {
         method: "GET"
     })
         .then(response => {
@@ -66,7 +65,7 @@ export const read = (productId) => {
 };
 
 export const listRelated = (productId) => {
-    return fetch(`api/products/related/${productId}`, {
+    return fetch(`../api/products/related/${productId}`, {
         method: "GET"
     })
         .then(response => {

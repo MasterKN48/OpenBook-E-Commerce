@@ -1,7 +1,6 @@
 
-
 export const read = (userId, token) => {
-    return fetch(`api/user/${userId}`, {
+    return fetch(`../api/user/${userId}`, {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -16,7 +15,7 @@ export const read = (userId, token) => {
 };
 
 export const update = (userId, token, user) => {
-    return fetch(`api/user/${userId}`, {
+    return fetch(`../api/user/${userId}`, {
         method: "PUT",
         headers: {
             Accept: "application/json",
@@ -42,7 +41,7 @@ export const updateUser = (user, next) => {
     }
 };
 export const getPurchaseHistory = (userId, token) => {
-    return fetch(`api/orders/by/user/${userId}`, {
+    return fetch(`../api/orders/by/user/${userId}`, {
         method: "GET",
         headers: {
             Accept: "application/json",

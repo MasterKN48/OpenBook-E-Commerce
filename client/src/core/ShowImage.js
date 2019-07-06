@@ -6,7 +6,7 @@ const ShowImage=({item,url})=>{
         alt={item.name}
         style={{maxHeight:'40%',maxWidth:'50%'}} 
         className="mb-3"
-        src={`api/${url}/photo/${item._id}`}
+        src={`../api/${url}/photo/${item._id}`}
         loader={
             <div className="ui placeholder">
               <div className="image"></div>

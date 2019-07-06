@@ -28,8 +28,8 @@ const Profile = ({ match }) => {
     };
 
     useEffect(() => {
-        init(match.params.userId);
-    });
+        init(match.params.userId);// eslint-disable-next-line
+    },[]);
 
     const handleChange = name => e => {
         setValues({ ...values, error: false, [name]: e.target.value });
