@@ -36,11 +36,11 @@ const Cart = () => {
             className="container-fluid"
         >
             <div className="row">
-                <div className="col-6">
+                <div className="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                     {items.length > 0 ? showItems(items) : noItemsMessage()}
                 </div>
 
-                <div className="col-6">
+                <div className="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                     <h3>Checkout</h3>
                     <hr/>
                     <Checkout products={items} />

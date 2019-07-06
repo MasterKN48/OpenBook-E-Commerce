@@ -54,7 +54,7 @@ const Checkout = ({ products }) => {
             <div>{showDropIn()}</div>
         ) : (
             <Link to="/signin">
-                <button className="btn btn-primary">Sign in to checkout</button>
+                <button className="btn btn-md btn-info">Sign in to checkout</button>
             </Link>
         );
     };
@@ -173,10 +173,10 @@ const Checkout = ({ products }) => {
 
     return (
         <div>
-            <h2>Total: ${getTotal()}</h2>
+            <h3>Total:<span className='lead text-success'>&#8377;{getTotal()}</span></h3>
             {showLoading(data.loading)}
             {showSuccess(data.success)}
-            {showError(data.error)}
+            {isAuthenticated() ? showError(data.error) : null}
             {showCheckout()}
         </div>
     );

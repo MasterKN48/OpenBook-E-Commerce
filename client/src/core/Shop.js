@@ -89,48 +89,55 @@ const Shop = () => {
     };
 
     return (
-        <Layout
-            title="Shop Page"
-            description="Search and find books of your choice"
-            className="container-fluid"
-        >
-            <div className="row">
-                <div className="col-4">
-                    <h4>Filter by categories</h4>
-                    <ul>
-                        <Checkbox
-                            categories={categories}
-                            handleFilters={filters =>
-                                handleFilters(filters, "category")
-                            }
-                        />
-                    </ul>
-
-                    <h4>Filter by price range</h4>
-                    <div>
-                        <RadioBox
-                            prices={prices}
-                            handleFilters={filters =>
-                                handleFilters(filters, "price")
-                            }
-                        />
-                    </div>
+      <Layout
+        title="Shop Page"
+        description="Search and find books of your choice"
+        className="container-fluid"
+      >
+        <div className="row">
+          <div className="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+            <div className="ui vertical menu ml-2">
+              <div className="item">
+                <div className="header">Filter by categories</div>
+                <div className="menu">
+                  <Checkbox
+                    categories={categories}
+                    handleFilters={filters =>
+                      handleFilters(filters, "category")
+                    }
+                  />
                 </div>
-
-                <div className="col-8">
-                    <h2 className="mb-4">Products</h2>
-                    <div className="row">
-                        {filteredResults.map((product, i) => (
-                            <div key={i} className="col-4 mb-3">
-                                <Card product={product}/>
-                            </div>
-                        ))}
-                    </div>
-                    <hr/>
-                    {loadMoreButton()}
+              </div>
+              <div className="item">
+                <div className="header">Filter by price range</div>
+                <div className="menu">
+                  <RadioBox
+                    prices={prices}
+                    handleFilters={filters =>
+                      handleFilters(filters, "price")
+                    }
+                  />
                 </div>
+              </div>
             </div>
-        </Layout>
+          </div>
+          <div className="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <h2 className="mb-4">Products</h2>
+            <div className="row">
+              {filteredResults.map((product, i) => (
+                <div
+                  key={i}
+                  className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-3"
+                >
+                  <Card product={product} />
+                </div>
+              ))}
+            </div>
+            <hr />
+            {loadMoreButton()}
+          </div>
+        </div>
+      </Layout>
     );
 };
 

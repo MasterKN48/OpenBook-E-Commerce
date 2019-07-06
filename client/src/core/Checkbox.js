@@ -17,10 +17,10 @@ const Checkbox=({categories,handleFilters})=>{
         handleFilters(newCheckedCategoryId);
     }
     return categories.map((c,i)=>(
-        <li key={i} className="list-unstyled">
-            <input value={checked.indexOf(c._id === -1)} onChange={handleToggle(c._id)} type="checkbox" className="form-check-input"/>
+        <div key={i}>
+            <input value={checked.indexOf(c._id === -1)} onChange={handleToggle(c._id)} type="checkbox" className="mr-2 ml-4"/>
             <label className="form-check-label">{c.name}</label>
-        </li>
+        </div>
     ));
 }
 export default Checkbox;

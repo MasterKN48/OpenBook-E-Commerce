@@ -51,8 +51,8 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
             <div className="input-group mb-3">
                 <div className="input-group-prepend">
                     <span className="input-group-text">Adjust Quantity</span>
+                    <input type="number" value={count} onChange={handleChange(product._id)} className='form-control ml-3' style={{width:'60px'}}/>
                 </div>
-                <input type="number" value={count} onChange={handleChange(product._id)} className='form-control'/>
             </div>
         )
     }
@@ -67,8 +67,8 @@ const Card = ({ product,removeButton=false,cartUpdate=false,cartButton=true,show
                 <div className="card-body">
                     {shouldRedirect(redirect)}
                     <ShowImage item={product} url="product" />
-                    <p className='lead mt-2 responsive'>{de === false ? product.description.substring(0,70) + '...' :product.description }</p>
-                    <p className='black-10'>${product.price}</p>
+                    <p className='lead mt-2 responsive'>{de === false ? product.description.substring(0,60) + '...' :product.description }</p>
+                    <p className='black-10 lead text-success'>&#8377;{product.price}</p>
                     <p className='black-9'>Category: {product.category && product.category.name}</p>
                     <p className='black-8'>Added on {moment(product.createdAt).fromNow()} </p>
                     {showStock(product.quantity)} <br/><br/>
