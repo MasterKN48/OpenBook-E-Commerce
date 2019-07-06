@@ -25,7 +25,7 @@ exports.signin=(req,res)=>{
     User.findOne({email},(err,user)=>{
         if(err || !user) {
             return res.status(400).json({
-                error: 'User with that email does not exist.Please SignUup'
+                error: 'User with that email does not exist.Please SignUp'
             });
         }
         // check for password
