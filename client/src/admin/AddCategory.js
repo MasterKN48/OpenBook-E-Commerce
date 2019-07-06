@@ -68,8 +68,8 @@ const AddCategory = () => {
             title="Add a new category"
             description={`G'day ${user.name}, ready to add a new category?`}
         >
-            <div className="row">
-                <div className="col-md-8 offset-md-2">
+            <div className="row container">
+                <div className="col-lg-8 col-sm-8 col-xs-8 col-md-8 offset-md-2 offset-sm-2 offset-xs-2">
                     {showSuccess() || showError()}
                     {newCategoryFom()}
                     {goBack()}

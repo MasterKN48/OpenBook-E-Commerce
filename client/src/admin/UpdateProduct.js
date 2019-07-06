@@ -119,14 +119,12 @@ const UpdateProduct = ({ match }) => {
             {goBack()}
             <h4>Product Photo</h4>
             <div className="form-group">
-                <label className="btn btn-secondary">
-                    <input
-                        onChange={handleChange("photo")}
-                        type="file"
-                        name="photo"
-                        accept="image/*"
-                    />
-                </label>
+                    <div className="custom-file">
+                        <input onChange={handleChange("photo")} name="photo"
+                        accept="image/*" type="file" className="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01"/>
+                        <label className="custom-file-label" htmlFor="inputGroupFile01">Choose file</label>
+                    </div>
             </div>
 
             <div className="form-group">
@@ -238,8 +236,8 @@ const UpdateProduct = ({ match }) => {
             title="Add a new product"
             description={`G'day ${user.name}, ready to add a new product?`}
         >
-            <div className="row">
-                <div className="col-md-8 offset-md-2">
+            <div className="row container">
+                <div className="col-lg-8 col-sm-8 col-xs-8 col-md-8 offset-md-2 offset-sm-2 offset-xs-2">
                     {showLoading()}
                     {showSuccess()}
                     {showError()}

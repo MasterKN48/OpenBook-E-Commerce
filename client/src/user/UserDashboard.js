@@ -98,9 +98,9 @@ const Dashboard = () => {
             description={`G'day ${name}!`}
             className="container-fluid"
         >
-            <div className="row">
-                <div className="col-3">{userLinks()}</div>
-                <div className="col-9">
+            <div className="row container">
+                <div className="col-lg-3 col-md-3 col-sm-8 col-xs-8">{userLinks()}</div>
+                <div className="col-lg-9 col-md-9 col-sm-8 col-xs-8">
                     {userInfo()}
                     {purchaseHistory(history)}
                 </div>

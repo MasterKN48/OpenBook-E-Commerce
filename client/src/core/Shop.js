@@ -94,7 +94,7 @@ const Shop = () => {
         description="Search and find books of your choice"
         className="container-fluid"
       >
-        <div className="row">
+        <div className="row container-fluid">
           <div className="col-lg-2 col-md-2 col-sm-12 col-xs-12">
             <div className="ui vertical menu ml-2">
               <div className="item">

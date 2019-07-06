@@ -96,10 +96,11 @@ const Orders = () => {
                 user.name
             }, you can manage all the orders here`}
         >
-            <div className="row">
+            <div className="row container">
+                
                 <div className="col-md-8 offset-md-2">
+                {goBack()}
                     {showOrdersLength()}
-
                     {orders.map((o, oIndex) => {
                         return (
                             <div
@@ -108,7 +109,7 @@ const Orders = () => {
                                 style={{ borderBottom: "5px solid indigo" }}
                             >
                                 <h4 className="mb-5">
-                                    <span className="bg-primary">
+                                    <span className="bg-grey">
                                         Order ID: {o._id}
                                     </span>
                                 </h4>
@@ -158,7 +159,6 @@ const Orders = () => {
                         );
                     })}
                 </div>
-                {goBack()}
             </div>
         </Layout>
     );

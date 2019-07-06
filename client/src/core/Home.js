@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
 import { getProducts } from "./apiCore";
 import Card from './Card';
@@ -35,7 +35,7 @@ const Home = () => {
         loadProductBySell();
     },[])
     const show=()=>(
-       <Fragment>
+       <div className='container-fluid'>
        <h2 className="mb-4">Best Sellers</h2>
         <div className="row">
         {productBySell.map((product,i)=>(
@@ -52,7 +52,7 @@ const Home = () => {
             </div>
         ))}
         </div>
-       </Fragment>
+       </div>
     );
     const loading=()=>(
         <div className="ui segment">
@@ -62,7 +62,7 @@ const Home = () => {
         </div>
     );
   return (
-    <Layout title="OpenBook" logo='true' className='container-fluid' description="Online World to buy Books">
+    <Layout title="OpenBook" logo='true' className='container' description="Online World to buy Books">
       <Search />
       {
           load === true ? (
