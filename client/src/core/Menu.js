@@ -34,6 +34,13 @@ const Menu=({history})=> {
                 <Link className="nav-link" to='/cart'><i className="shopping cart icon"></i>{itemTotal() !== 0 ? <sup><small className='ui circular tiny label'>{itemTotal()}</small></sup> : null}
                 </Link>
             </li>
+            {isAuthenticated() && (
+                    <Fragment>
+                        <li className='text-warning mt-2'>
+                            Welcome {isAuthenticated().user.name}
+                        </li>
+                    </Fragment>
+                )}
             </ul>
             <ul className="navbar-nav ml-auto nav-flex-icons">
                 {!isAuthenticated() && (

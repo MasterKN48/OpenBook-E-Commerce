@@ -32,14 +32,14 @@ const Product=(props)=>{
     },[props]);
     return (
         <Layout title={product && product.name} className='container-fluid' description={product && product.description && product.description.substring(0,80)}>
-          <div className="row">
-                <div className="col-8">
+          <div className="row container">
+                <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     {product && product.description && (
                         <Card product={product} showButton={false} de={true} />
                     )}
                 </div>
 
-                <div className="col-4">
+                <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <h4>Related products</h4>
                     {relatedProduct.map((p, i) => (
                         <div key={i} className="mb-3">
