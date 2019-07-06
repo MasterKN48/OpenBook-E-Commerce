@@ -38,39 +38,19 @@ const Signup = () => {
     };
 
     const signUpForm = () => (
-        <form>
-            <div className="form-group">
-                <label className="text-muted">Name</label>
-                <input
-                    onChange={handleChange("name")}
-                    type="text"
-                    className="form-control"
-                    value={name}
-                />
+        <form className="text-center border border-light p-5" onSubmit={clickSubmit}>
+            <p className="h4 mb-4">Sign Up</p>
+            <input onChange={handleChange("name")} value={name} type="text" required id="defaultLoginFormEmail" className="form-control mb-4" placeholder="Name" />
+            <input onChange={handleChange("email")} value={email} type="email" required id="defaultLoginFormEmail" className="form-control mb-4" placeholder="E-mail" />
+            <input onChange={handleChange("password")} value={password} type="password" required id="defaultLoginFormPassword" className="form-control mb-4" placeholder="Password" />
+            <div className="d-flex justify-content-around">
+                <div>
+                </div>
             </div>
-
-            <div className="form-group">
-                <label className="text-muted">Email</label>
-                <input
-                    onChange={handleChange("email")}
-                    type="email"
-                    className="form-control"
-                    value={email}
-                />
-            </div>
-
-            <div className="form-group">
-                <label className="text-muted">Password</label>
-                <input
-                    onChange={handleChange("password")}
-                    type="password"
-                    className="form-control"
-                    value={password}
-                />
-            </div>
-            <button onClick={clickSubmit} className="btn btn-primary">
-                Submit
-            </button>
+            <button onClick={clickSubmit} className="btn btn-info btn-block my-4" type="submit">Sign Up</button>
+            <p>Already a member?
+                <Link to='/signin'>Log In</Link>
+            </p>
         </form>
     );
 

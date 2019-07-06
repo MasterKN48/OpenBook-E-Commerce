@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Layout from "../core/Layout";
+import {Link} from 'react-router-dom';
 import { signin, authenticate,isAuthenticated } from "../auth";
 
 const Signin = () => {
@@ -37,29 +38,18 @@ const Signin = () => {
     };
 
     const signInForm = () => (
-        <form>
-            <div className="form-group">
-                <label className="text-muted">Email</label>
-                <input
-                    onChange={handleChange("email")}
-                    type="email"
-                    className="form-control"
-                    value={email}
-                />
+        <form className="text-center border border-light p-5" onSubmit={clickSubmit}>
+            <p className="h4 mb-4">Log In</p>
+            <input onChange={handleChange("email")} value={email} type="email" id="defaultLoginFormEmail" className="form-control mb-4" placeholder="E-mail" />
+            <input onChange={handleChange("password")} value={password} type="password" id="defaultLoginFormPassword" className="form-control mb-4" placeholder="Password" />
+            <div className="d-flex justify-content-around">
+                <div>
+                </div>
             </div>
-
-            <div className="form-group">
-                <label className="text-muted">Password</label>
-                <input
-                    onChange={handleChange("password")}
-                    type="password"
-                    className="form-control"
-                    value={password}
-                />
-            </div>
-            <button onClick={clickSubmit} className="btn btn-primary">
-                Submit
-            </button>
+            <button onClick={clickSubmit} className="btn btn-info btn-block my-4" type="submit">Log In</button>
+            <p>Not a member?
+                <Link to='/signup'>Sign Up</Link>
+            </p>
         </form>
     );
 
