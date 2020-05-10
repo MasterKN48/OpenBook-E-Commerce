@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const expressValidator = require("express-validator");
 const helmet = require("helmet");
+const path = require("path");
 const compression = require("compression");
 // Routes
 const auth = require("./routes/auth");
