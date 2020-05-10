@@ -26,7 +26,7 @@ mongoose
     useCreateIndex: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("DB Connected"));
+  .then(() => console.log("DB Connected: "));
 // middlewares
 app.use(morgan("dev"));
 app.use(bodyParser.json());

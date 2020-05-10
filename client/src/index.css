@@ -6,16 +6,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-footer{
-  position:absolute;
-  left:0;
-  bottom:0;
-  right:0;
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
-#dd{
+#dd {
   position: relative;
   min-height: 100vh;
-  padding-bottom:120px;
+  padding-bottom: 120px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -49,7 +49,7 @@ code {
 .black-5 {
   background: #b3b3b3;
 }
-.name{
+.name {
   background-color: indigo;
   color: #fff;
   font-weight: bold;
@@ -57,36 +57,36 @@ code {
 
 @-webkit-keyframes Gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
 @-moz-keyframes Gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
 @keyframes Gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
