@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+.env ->
+BRAINTREE_ID=
+BRAINTREE_PRIVATE=
+BRAINTREE_PUBLIC
+JWT=
+MONGO_URI=
+
 ## Available Scripts
 
 In the project directory, you can run:
