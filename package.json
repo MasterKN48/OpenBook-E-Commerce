@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "node server",
+    "start": "forever server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -16,24 +16,25 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "braintree": "^2.18.0",
+    "braintree": "^2.22.0",
     "compression": "^1.7.4",
-    "concurrently": "^4.1.1",
-    "cookie-parser": "^1.4.4",
+    "concurrently": "^5.2.0",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-jwt": "^5.3.1",
-    "express-validator": "^5.3.1",
-    "formidable": "^1.2.1",
+    "express-jwt": "^5.3.3",
+    "express-validator": "^6.4.1",
+    "forever": "^2.0.0",
+    "formidable": "^1.2.2",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.11",
-    "mongoose": "^5.6.2",
-    "morgan": "^1.9.1",
-    "uuid": "^3.3.2"
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.13",
+    "morgan": "^1.10.0",
+    "uuid": "^8.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^2.0.3"
   }
 }

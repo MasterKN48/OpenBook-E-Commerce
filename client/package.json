@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "braintree-web": "^3.46.0",
-    "braintree-web-drop-in-react": "^1.0.8",
-    "moment": "^2.24.0",
-    "query-string": "^6.8.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-image": "^2.1.3",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "braintree-web": "^3.62.0",
+    "braintree-web-drop-in-react": "^1.1.1",
+    "moment": "^2.25.3",
+    "query-string": "^6.12.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-image": "^2.4.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
