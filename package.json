@@ -24,7 +24,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-jwt": "^5.3.3",
-    "express-validator": "^6.4.1",
+    "express-validator": "^5.3.0",
     "forever": "^2.0.0",
     "formidable": "^1.2.2",
     "helmet": "^3.22.0",
