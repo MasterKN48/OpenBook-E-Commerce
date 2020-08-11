@@ -1,75 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img alt='log' src="client/public/icons/android-chrome-192x192.png" style='height:64px' />
 
-.env ->
-BRAINTREE_ID=
-BRAINTREE_PRIVATE=
-BRAINTREE_PUBLIC
-JWT=
-MONGO_URI=
+## OpenBook  - A E-Commerce for Book Selling Progressive Web App
 
-## Available Scripts
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://openbook48.herokuapp.com) 
 
-In the project directory, you can run:
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://openbook48.herokuapp.com) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/MasterKN48/OpenBook-E-Commerce/issues/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/MasterKN48/blogs/master/LICENSE)  [![GitHub version](https://badge.fury.io/gh/Naereen%2FStrapDown.js.svg)]()  [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/MasterKN48/OpenBook-E-Commerce) [![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://github.com/MasterKN48/OpenBook-E-Commerce)
 
-### `npm start`
+It is an MERN ( mongodb, express, react, node) stack e-commerce app. This app includes lots of functionality like user dashboard, admin dashboard, create-product, create-category, manage order, buy books, profile management, cart , checkout with brain-tree payment gateway (sandbox) with credit card and paypal. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### `Tech Stack:`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+[![Generic badge](https://img.shields.io/badge/Node.js->=10-red.svg)](https://shields.io/)  [![Generic badge](https://img.shields.io/badge/React.js->=16.8-blue.svg)](https://shields.io/)  [![Generic badge](https://img.shields.io/badge/MongoDB->=4-teal.svg)](https://shields.io/)  [![Generic badge](https://img.shields.io/badge/Express.js->=4-<COLOR>.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Braintree.js->=2-yellow.svg)](https://shields.io/)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `How to run locally?`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+1. git clone https://github.com/MasterKN48/OpenBook-E-Commerce
+2. cd OpenBook-E-Commerce
+3. npm i
+4. cd client 
+5. npm i
+6. cd ..
+# to run server you must have .env file in root project directory
+# see below .env file structure and replace with your value
+7. npm run dev
+# project started
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### `.env structure`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+MONGO_URI=<MONGO_DB_SERVER>
+NODE_ENV=production  # `production` or `dev`
+CLIENT_URL=<REACT_APP_SERVER>
+PORT=8000
+BRAINTREE_ID=<BRAINTREE_SANDBOX_ID>
+BRAINTREE_PRIVATE=<BRAINTREE_SANDBOX_PRIVATE_ID>
+BRAINTREE_PUBLIC=<BRAINTREE_SANDBOX_PUBLIC_ID>
+JWT=<JWT_SECRET>
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)  [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
