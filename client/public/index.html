@@ -2,46 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/icons/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#1B1C1D" />
+    <meta name="description" content="OpenBook A E-Commerce PWA App" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!-- Bootstrap core CSS -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="preload stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
     />
-    <!-- Material Design Bootstrap -->
+
     <link
+      rel="preload stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css"
-      rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+      rel="preload stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
-    <title>OpenBook</title>
+    <link
+      rel="preload stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <title>OpenBook | A E-Commerce PWA</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!-- JQuery -->
+
     <script
+      defer
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
     ></script>
-    <!-- Bootstrap tooltips -->
+
     <script
+      defer
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
     ></script>
-    <!-- Bootstrap core JavaScript -->
+
     <script
+      defer
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
     ></script>
-    <!-- MDB pro JavaScript -->
+
     <script
+      defer
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/js/mdb.min.js"
     ></script>
@@ -60,10 +82,15 @@
       gtag("config", "UA-150536579-2");
     </script>
     <script>
-      console.log(
-        "%c MasterKN!",
-        "font-weight: bold; font-size: 40px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)"
-      );
+      if (window.location.hostname !== "localhost") {
+        console.log(
+          "%c MasterKN!",
+          "font-weight: bold; font-size: 40px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)"
+        );
+        console.log = () => {};
+        console.warn = () => {};
+        console.error = () => {};
+      }
     </script>
   </body>
 </html>

@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "braintree-web": "^3.62.0",
+    "braintree-web": "^3.64.2",
     "braintree-web-drop-in-react": "^1.1.1",
-    "moment": "^2.25.3",
-    "query-string": "^6.12.1",
+    "moment": "^2.27.0",
+    "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-image": "^2.4.0",
-    "react-router-dom": "^5.1.2",
+    "react-image": "^4.0.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -22,7 +22,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:8000",
   "browserslist": {
     "production": [
       ">0.2%",

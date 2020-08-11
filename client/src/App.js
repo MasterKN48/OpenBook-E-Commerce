@@ -3,9 +3,10 @@ import Routes from "./user/Route";
 import Footer from "./core/Footer";
 const App = () => {
   return (
-    <div id="dd">
-      <Routes />
-      <div style={{ marginTop: "10vh", marginBottom: "8vh" }}></div>
+    <div>
+      <div className="main">
+        <Routes />
+      </div>
       <Footer />
     </div>
   );
