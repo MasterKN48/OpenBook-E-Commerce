@@ -32,7 +32,11 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 app.use(cookieParser());
 app.use(expressValidator());
 app.use(cors(process.env.CLIENT_URL));
