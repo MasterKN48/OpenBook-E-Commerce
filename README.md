@@ -1,4 +1,4 @@
-<img alt='log' src="client/public/icons/android-chrome-192x192.png" style='height:64px' />
+<img alt='log' src="client/public/icons/android-chrome-192x192.png" style='height:48px' />
 
 ## OpenBook  - A E-Commerce for Book Selling Progressive Web App
 
