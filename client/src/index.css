@@ -35,12 +35,17 @@ footer {
 
 .black-10 {
   background: #f2f2f2;
+  padding:8px
 }
 .black-9 {
   background: #e6e6e6;
+  padding:8px
+
 }
 .black-8 {
   background: #d9d9d9;
+  padding:8px
+
 }
 .black-7 {
   background: #cccccc;
