@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       trim: true, // remove space from end & an begining if have
       required: true,
-      unique: 35,
+      unique: true,
     },
     hashed_password: {
       type: String,
