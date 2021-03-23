@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-import ShowImage from "./ShowImage";
-import moment from "moment";
-import { addItem, removeItem, updateItem } from "./cartHelpers";
+import React, { useState } from 'react'
+import { Link, Redirect } from 'react-router-dom'
+import ShowImage from './ShowImage'
+import moment from 'moment'
+import { addItem, removeItem, updateItem } from './cartHelpers'
 const Card = ({
   product,
   removeButton = false,
@@ -11,47 +11,47 @@ const Card = ({
   showButton = true,
   de = false,
 }) => {
-  const [redirect, setRedirect] = useState(false);
-  const [count, setCount] = useState(product.count);
+  const [redirect, setRedirect] = useState(false)
+  const [count, setCount] = useState(product.count)
   const showStock = (qu) => {
     return qu > 0 ? (
       <span className="badge badge-primary badge-pill p-2">In Stock</span>
     ) : (
       <span className="badge badge-danger badge-pill p-2">Out of Stock</span>
-    );
-  };
+    )
+  }
   const addToCart = () => {
     addItem(product, () => {
-      setRedirect(true);
-    });
-  };
+      setRedirect(true)
+    })
+  }
 
   const shouldRedirect = (redirect) => {
     if (redirect) {
-      return <Redirect to="/cart" />;
+      return <Redirect to="/cart" />
     }
-  };
+  }
   const showAddToCartButton = (qu) => {
     if (qu > 0) {
       return (
         cartButton && (
           <div id="btt" onClick={addToCart} className="ui positive button">
-            Add to card
+            Add to cart
           </div>
         )
-      );
+      )
     } else {
       return (
         cartButton && <div className="ui negative button">Out of Stock</div>
-      );
+      )
     }
-  };
+  }
   const handleChange = (productId) => (event) => {
-    setCount(event.target.value < 1 ? 1 : event.target.value);
+    setCount(event.target.value < 1 ? 1 : event.target.value)
     if (event.target.value >= 1) {
-      updateItem(productId, event.target.value);
+      updateItem(productId, event.target.value)
     }
-  };
+  }
   const showCartUpdate = () => {
     return (
       cartUpdate && (
@@ -63,13 +63,13 @@ const Card = ({
               value={count}
               onChange={handleChange(product._id)}
               className="form-control ml-3"
-              style={{ width: "60px" }}
+              style={{ width: '60px' }}
             />
           </div>
         </div>
       )
-    );
-  };
+    )
+  }
   const showCartRemove = () => {
     return (
       removeButton && (
@@ -77,12 +77,12 @@ const Card = ({
           onClick={() => removeItem(product._id)}
           className="btn btn-outline-dark-green"
         >
-          {" "}
+          {' '}
           Remove
         </button>
       )
-    );
-  };
+    )
+  }
   //console.log(product);
   return (
     <div className="card h-100">
@@ -94,7 +94,7 @@ const Card = ({
         </div>
         <p className="lead mt-2 responsive">
           {de === false
-            ? product.description.substring(0, 60) + "..."
+            ? product.description.substring(0, 60) + '...'
             : product.description}
         </p>
         <p className="black-10 lead text-success">&#8377;{product.price}</p>
@@ -102,7 +102,7 @@ const Card = ({
           Category: {product.category && product.category.name}
         </p>
         <p className="black-8">
-          Added on {moment(product.createdAt).fromNow()}{" "}
+          Added on {moment(product.createdAt).fromNow()}{' '}
         </p>
         {showStock(product.quantity)} <br />
         <br />
@@ -122,7 +122,7 @@ const Card = ({
         {showCartRemove()}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
